@@ -38,6 +38,20 @@ if (Meteor.isClient) {
     }
   });
 
+  // various callbacks we should be familiar with
+  // rendered, created, destroyed
+  Template.item.rendered = function() {
+    console.log("rendered:", this.data)
+  };
+
+  Template.item.created = function() {
+    console.log("created:", this.data)
+  };
+
+  Template.item.destroyed = function() {
+    console.log("destroyed:", this.data)
+  };
+
 }
 
 if (Meteor.isServer) {
